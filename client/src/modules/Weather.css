@@ -1,0 +1,30 @@
+.temperature {
+  font-size: 3.6vw;
+  font-weight: 300;
+  color: white;
+}
+
+.summary {
+  color: white;
+  font-weight: 300;
+  font-size: 1.4vw;
+}
+
+.now {
+  margin-bottom: 1rem;
+}
+
+.today {
+  margin-bottom: 1rem;
+}
+
+.today-summary {
+  font-weight: 300;
+  font-size: 1vw;
+  color: white;
+}
+
+.today-temp {
+  font-size: .6vw;
+  font-weight: 600;
+}

@@ -1,0 +1,35 @@
+.calendar {
+    .group {
+        margin-bottom: 1.25rem;
+    }
+    .calendar-name {
+        font-size: 1vw;
+        font-weight: 300;
+        margin-bottom: 1.25rem;
+    }
+    .group-name {
+        font-size: 1vw;
+        font-weight: 500;
+    }
+    .event {
+        display: flex;
+        line-height: 1em;
+    }
+    .time,
+    .summary {
+        line-height: 1em;
+        margin: 0;
+        font-size: .75vw;
+        line-height: 1.5rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .time {
+        width: 20%;
+        font-weight: 500;
+    }
+    .summary {
+        width: 80%;
+    }
+}

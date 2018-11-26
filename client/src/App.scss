@@ -1,0 +1,149 @@
+@font-face {
+  font-family: 'Geomanist';
+  src: url('./fonts/geomanist/hinted-Geomanist-Black.eot');
+  src: url('./fonts/geomanist/hinted-Geomanist-Black.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/geomanist/hinted-Geomanist-Black.woff2') format('woff2'),
+  url('./fonts/geomanist/hinted-Geomanist-Black.woff') format('woff'),
+  url('./fonts/geomanist/hinted-Geomanist-Black.ttf') format('truetype'),
+  url('./fonts/geomanist/hinted-Geomanist-Black.svg#Geomanist-Black') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geomanist Book';
+  src: url('./fonts/geomanist/hinted-Geomanist-Book.eot');
+  src: url('./fonts/geomanist/hinted-Geomanist-Book.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/geomanist/hinted-Geomanist-Book.woff2') format('woff2'),
+  url('./fonts/geomanist/hinted-Geomanist-Book.woff') format('woff'),
+  url('./fonts/geomanist/hinted-Geomanist-Book.ttf') format('truetype'),
+  url('./fonts/geomanist/hinted-Geomanist-Book.svg#Geomanist-Book') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geomanist Ultra';
+  src: url('./fonts/geomanist/hinted-Geomanist-Ultra.eot');
+  src: url('./fonts/geomanist/hinted-Geomanist-Ultra.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/geomanist/hinted-Geomanist-Ultra.woff2') format('woff2'),
+  url('./fonts/geomanist/hinted-Geomanist-Ultra.woff') format('woff'),
+  url('./fonts/geomanist/hinted-Geomanist-Ultra.ttf') format('truetype'),
+  url('./fonts/geomanist/hinted-Geomanist-Ultra.svg#Geomanist-Ultra') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geomanist';
+  src: url('./fonts/geomanist/hinted-Geomanist-Thin.eot');
+  src: url('./fonts/geomanist/hinted-Geomanist-Thin.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/geomanist/hinted-Geomanist-Thin.woff2') format('woff2'),
+  url('./fonts/geomanist/hinted-Geomanist-Thin.woff') format('woff'),
+  url('./fonts/geomanist/hinted-Geomanist-Thin.ttf') format('truetype'),
+  url('./fonts/geomanist/hinted-Geomanist-Thin.svg#Geomanist-Thin') format('svg');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geomanist';
+  src: url('./fonts/geomanist/hinted-Geomanist-Light.eot');
+  src: url('./fonts/geomanist/hinted-Geomanist-Light.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/geomanist/hinted-Geomanist-Light.woff2') format('woff2'),
+  url('./fonts/geomanist/hinted-Geomanist-Light.woff') format('woff'),
+  url('./fonts/geomanist/hinted-Geomanist-Light.ttf') format('truetype'),
+  url('./fonts/geomanist/hinted-Geomanist-Light.svg#Geomanist-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geomanist';
+  src: url('./fonts/geomanist/hinted-Geomanist-Regular.eot');
+  src: url('./fonts/geomanist/hinted-Geomanist-Regular.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/geomanist/hinted-Geomanist-Regular.woff2') format('woff2'),
+  url('./fonts/geomanist/hinted-Geomanist-Regular.woff') format('woff'),
+  url('./fonts/geomanist/hinted-Geomanist-Regular.ttf') format('truetype'),
+  url('./fonts/geomanist/hinted-Geomanist-Regular.svg#Geomanist-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geomanist';
+  src: url('./fonts/geomanist/hinted-Geomanist-ExtraLight.eot');
+  src: url('./fonts/geomanist/hinted-Geomanist-ExtraLight.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/geomanist/hinted-Geomanist-ExtraLight.woff2') format('woff2'),
+  url('./fonts/geomanist/hinted-Geomanist-ExtraLight.woff') format('woff'),
+  url('./fonts/geomanist/hinted-Geomanist-ExtraLight.ttf') format('truetype'),
+  url('./fonts/geomanist/hinted-Geomanist-ExtraLight.svg#Geomanist-ExtraLight') format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geomanist';
+  src: url('./fonts/geomanist/hinted-Geomanist-Medium.eot');
+  src: url('./fonts/geomanist/hinted-Geomanist-Medium.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/geomanist/hinted-Geomanist-Medium.woff2') format('woff2'),
+  url('./fonts/geomanist/hinted-Geomanist-Medium.woff') format('woff'),
+  url('./fonts/geomanist/hinted-Geomanist-Medium.ttf') format('truetype'),
+  url('./fonts/geomanist/hinted-Geomanist-Medium.svg#Geomanist-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geomanist';
+  src: url('./fonts/geomanist/hinted-Geomanist-Bold.eot');
+  src: url('./fonts/geomanist/hinted-Geomanist-Bold.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/geomanist/hinted-Geomanist-Bold.woff2') format('woff2'),
+  url('./fonts/geomanist/hinted-Geomanist-Bold.woff') format('woff'),
+  url('./fonts/geomanist/hinted-Geomanist-Bold.ttf') format('truetype'),
+  url('./fonts/geomanist/hinted-Geomanist-Bold.svg#Geomanist-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+$slick-font-path: "~slick-carousel/slick/fonts/";
+$slick-loader-path: "~slick-carousel/slick/";
+@import "~slick-carousel/slick/slick.scss";
+@import "~slick-carousel/slick/slick-theme.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  font-family: "Geomanist";
+  letter-spacing: .1em;
+  color: white;
+  background-color: #313131;
+}
+
+.module {
+  width: Calc(100%/4);
+  padding: 1rem;
+  height: 50%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+
+  .updated {
+    position: absolute;
+    bottom: 0rem;
+    background-color: rgba(0, 0, 0, 0.10);
+    border-radius: 26px;
+    padding: 6px 12px;
+    font-size: .75vw;
+    right: 1rem;
+    line-height: 1rem;
+  }
+}
