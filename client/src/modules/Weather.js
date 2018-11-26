@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Weather.css';
-import io from "socket.io-client";
 import _ from "lodash";
 import moment from "moment";
 import Moment from "react-moment";
@@ -11,11 +10,10 @@ class Weather extends Component {
         updated: "",
         icon: ""
     }
-    socket = io(window.location.hostname);
 
     componentDidMount() {
         var that = this;
-        this.socket.on("data", function (data) {
+        this.props.socket.on("data", function (data) {
             if(data.weather) {
                 that.setState({ 
                     updated: data.weather.timestamp, 

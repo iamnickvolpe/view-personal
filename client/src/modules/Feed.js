@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Feed.scss';
-import io from "socket.io-client";
 import _ from "lodash";
 import Slider from 'react-slick';
 import Moment from 'react-moment';
@@ -10,12 +9,10 @@ class Feed extends Component {
         feed: {},
         updated: ""
     }
-    socket = io(window.location.hostname);
 
     componentDidMount() {
         var that = this;
-        this.socket.on("data", function (data) {
-            console.log(data)
+        this.props.socket.on("data", function (data) {
             if (data.feed) {
                 that.setState({
                     updated: data.feed.timestamp,
@@ -38,7 +35,7 @@ class Feed extends Component {
             speed: 500,
             slidesToShow: 1,
             slidesToScroll: 1,
-            autoplaySpeed: 1000,
+            autoplaySpeed: 5000,
             autoplay: true
         };
         if (!_.isEmpty(this.state.feed)) {

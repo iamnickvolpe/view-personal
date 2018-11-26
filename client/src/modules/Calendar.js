@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Calendar.scss';
-import io from "socket.io-client";
 import _ from "lodash";
 import Moment from "react-moment";
 import moment from "moment";
@@ -10,11 +9,10 @@ class Calendar extends Component {
         calendar: {},
         updated: ""
     }
-    socket = io(window.location.hostname);
 
     componentDidMount() {
         var that = this;
-        this.socket.on("data", function (data) {
+        this.props.socket.on("data", function (data) {
             if (data["calendar-" + that.props.calendar]) {
                 that.setState({
                     calendar: data["calendar-" + that.props.calendar].body,

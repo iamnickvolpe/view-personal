@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Calendar.scss';
-import io from "socket.io-client";
 import _ from "lodash";
 import Moment from "react-moment";
 import moment from "moment";
@@ -10,11 +9,10 @@ class Subway extends Component {
         subway: {},
         updated: ""
     }
-    socket = io(window.location.hostname);
 
     componentDidMount() {
         var that = this;
-        this.socket.on("data", function (data) {
+        this.props.socket.on("data", function (data) {
             if (data.subway) {
                 that.setState({
                     subway: data.subway.body,
@@ -33,17 +31,16 @@ class Subway extends Component {
                     stops.push(stop);
                 })
             });
-            console.log(stops)
         }
         return (
             <div style={{ backgroundColor: this.props.color }} className="module subway">
                 {!_.isEmpty(this.state.subway) ? (
                     <div>
-                        {stops.map(stop =>
-                            <div>
+                        {stops.map((stop, index) =>
+                            <div key={index}>
                                 <div>{stop.station}</div>
-                                {stop.updates.map(update =>
-                                    <div>{moment(update.time.low * 1000).fromNow()}</div>
+                                {stop.updates.map((update, index) =>
+                                    <div key={index}>{moment(update.time.low * 1000).fromNow()}</div>
                                 )}
                             </div>
                         )}
