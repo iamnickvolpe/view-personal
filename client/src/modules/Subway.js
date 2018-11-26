@@ -10,7 +10,7 @@ class Subway extends Component {
         subway: {},
         updated: ""
     }
-    socket = io('localhost:3000');
+    socket = io(window.location.hostname);
 
     componentDidMount() {
         var that = this;

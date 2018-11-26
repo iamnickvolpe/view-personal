@@ -11,7 +11,7 @@ class Weather extends Component {
         updated: "",
         icon: ""
     }
-    socket = io('localhost:3000');
+    socket = io(window.location.hostname);
 
     componentDidMount() {
         var that = this;
