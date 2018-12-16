@@ -75,7 +75,7 @@ class Calendar extends Component {
 
                         {otherEvents.length ? (
                             <div className="group">
-                                <h2 className="group-name">Future Events</h2>
+                                <h2 className="group-name">2+ Days From Now</h2>
                                 {otherEvents.map(item =>
                                     <div className="event" key={item.id}>
                                         <p className="time"><Moment format="M/D">{item.day}</Moment></p> <p className="summary">{item.summary}</p>
@@ -83,6 +83,10 @@ class Calendar extends Component {
                                 )}
                             </div>
                         ) : null}
+
+                        {!calendarItems.length ? (
+                            <div className="none">No events</div>
+                        ): null}
 
                         <p className="updated"><Moment fromNow>{this.state.updated}</Moment></p>
                     </div>

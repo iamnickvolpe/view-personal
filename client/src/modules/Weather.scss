@@ -1,0 +1,33 @@
+.weather {
+  color: white;
+  .temperature {
+    font-size: 3.6vw;
+    font-weight: 300;
+  }
+  
+  .summary {
+    font-weight: 300;
+    font-size: 1.4vw;
+  }
+  
+  .now {
+    margin-bottom: 2rem;
+  }
+  
+  .day {
+    margin-bottom: 1rem;
+  }
+
+  .group-name {
+    font-size: 1vw;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: .5vw;
+    line-height: 1rem;
+  }
+  
+  .day-summary {
+    font-size: .75vw;
+    line-height: 1rem;
+  }
+}

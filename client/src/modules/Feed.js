@@ -35,7 +35,7 @@ class Feed extends Component {
             speed: 500,
             slidesToShow: 1,
             slidesToScroll: 1,
-            autoplaySpeed: 5000,
+            autoplaySpeed: 20000,
             autoplay: true
         };
         if (!_.isEmpty(this.state.feed)) {
@@ -53,6 +53,7 @@ class Feed extends Component {
                                     ) : (null)}
                                     <div className="content">
                                         <h1 className="title">{item.title}</h1>
+                                        <p className="published"><Moment fromNow>{item.published}</Moment></p>
                                         <p className="summary" dangerouslySetInnerHTML={this.createMarkup(item.summary?(item.summary.content):(item.content.content))}></p>
                                     </div>
                                 </div>

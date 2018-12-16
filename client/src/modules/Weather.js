@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Weather.css';
+import './Weather.scss';
 import _ from "lodash";
 import moment from "moment";
 import Moment from "react-moment";
@@ -36,7 +36,7 @@ class Weather extends Component {
             dailyData = this.state.weather.daily.data;
         }
         return (
-            <div style={{ backgroundColor: this.props.color, backgroundImage: `url(https://source.unsplash.com/1600x900/?${this.state.icon})` }} className="module">
+            <div style={{ backgroundColor: this.props.color }} className="weather module">
                 {!_.isEmpty(this.state.weather) ? (
                     <div>
                         <div className="now">
@@ -44,22 +44,19 @@ class Weather extends Component {
                             <div className="summary">{now}</div>
                         </div>
 
-                        <div className="today">
-                            <div className="today-header">Today</div>
-                            <div className="today-temperature">{Math.round(dailyData[0].temperatureHigh)}&deg;/{Math.round(dailyData[0].temperatureLow)}&deg;</div>
-                            <div className="today-summary">{dailyData[0].summary}</div>
+                        <div className="day">
+                            <h2 className="group-name">Today H{Math.round(dailyData[0].temperatureHigh)}&deg; L{Math.round(dailyData[0].temperatureLow)}&deg;</h2>
+                            <div className="day-summary">{dailyData[0].summary}</div>
                         </div>
 
-                        <div className="today">
-                            <div className="today-header">Tomorrow</div>
-                            <div className="today-temperature">{Math.round(dailyData[1].temperatureHigh)}&deg;/{Math.round(dailyData[1].temperatureLow)}&deg;</div>
-                            <div className="today-summary">{dailyData[1].summary}</div>
+                        <div className="day">
+                            <h2 className="group-name">Tomorrow H{Math.round(dailyData[1].temperatureHigh)}&deg; L{Math.round(dailyData[1].temperatureLow)}&deg;</h2>
+                            <div className="day-summary">{dailyData[1].summary}</div>
                         </div>
 
-                        <div className="today">
-                            <div className="today-header">{moment.unix(dailyData[2].time).format("dddd")}</div>
-                            <div className="today-temperature">{Math.round(dailyData[2].temperatureHigh)}&deg;/{Math.round(dailyData[2].temperatureLow)}&deg;</div>
-                            <div className="today-summary">{dailyData[2].summary}</div>
+                        <div className="day">
+                            <h2 className="group-name">{moment.unix(dailyData[2].time).format("dddd")} H{Math.round(dailyData[2].temperatureHigh)}&deg; L{Math.round(dailyData[2].temperatureLow)}&deg;</h2>
+                            <div className="day-summary">{dailyData[2].summary}</div>
                         </div>
 
 

@@ -115,35 +115,53 @@ $slick-loader-path: "~slick-carousel/slick/";
   box-sizing: border-box;
 }
 
-.App {
-  display: flex;
-  flex-wrap: wrap;
+.cards {
+  display: grid;
+  padding: 2rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   position: absolute;
+  grid-gap: 2rem;
+  grid-template-rows: 1fr 1fr;
   height: 100%;
   width: 100%;
   font-family: "Geomanist";
   letter-spacing: .1em;
-  color: white;
-  background-color: #313131;
+  background-size: cover;
+  background-position: center center;
 }
 
 .module {
-  width: Calc(100%/4);
-  padding: 1rem;
-  height: 50%;
+  padding: 2rem;
   overflow: hidden;
   background-size: cover;
   background-position: center center;
   position: relative;
+  border-radius: 10px;
+
+  > div {
+    height: 100%;
+    overflow: hidden;
+  }
 
   .updated {
     position: absolute;
     bottom: 0rem;
-    background-color: rgba(0, 0, 0, 0.10);
-    border-radius: 26px;
+    background-color: rgba(0, 0, 0, 0.1);
     padding: 6px 12px;
-    font-size: .75vw;
-    right: 1rem;
-    line-height: 1rem;
+    font-size: .65vw;
+    right: 0;
+    margin: 0;
+    font-weight: 400;
+    line-height: 14px;
+    border-top-left-radius: 8px;
   }
+}
+
+.cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
 }

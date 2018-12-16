@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Calendar.scss';
+import './Subway.scss';
 import _ from "lodash";
 import Moment from "react-moment";
 import moment from "moment";
@@ -37,11 +37,22 @@ class Subway extends Component {
                 {!_.isEmpty(this.state.subway) ? (
                     <div>
                         {stops.map((stop, index) =>
-                            <div key={index}>
-                                <div>{stop.station}</div>
-                                {stop.updates.map((update, index) =>
-                                    <div key={index}>{moment(update.time.low * 1000).fromNow()}</div>
-                                )}
+                            <div className="stop" key={index}>
+                                <div>
+                                    <div className={"line-" + stop.line}>{stop.line}</div>
+                                </div>
+                                
+                                <div>
+                                    <h2 className="group-name">{stop.station}</h2>
+                                    {stop.updates.map((update, index) =>
+                                        <div className="update" key={index}>
+                                            {moment(update.time.low * 1000).fromNow()}
+                                        </div>
+                                    )}
+                                    {!stop.updates.length ? (
+                                        <div className="update">No trains</div>
+                                    ): null}
+                                </div>
                             </div>
                         )}
                         <p className="updated"><Moment fromNow>{this.state.updated}</Moment></p>

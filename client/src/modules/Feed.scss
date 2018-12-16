@@ -1,5 +1,7 @@
 .module.feed {
     padding: 0;
+    padding-bottom: 2rem;
+    color: #555;
     .image {
         height: 25vh;
         width: 100%;
@@ -11,19 +13,24 @@
     .title {
         font-size: 1.5vw;
         font-weight: 500;
-        margin: 0;
-        color: #555;
+        margin: 0 0 .5rem 0;
     }
     .content {
         padding: 1rem;
     }
+    .published {
+        font-size: .75vw;
+        margin: 0 0 .75rem 0;
+        color: #999;
+    }
     .summary {
         font-size: .75vw;
         line-height: 1.5em;
-        color: #555;
+        margin: 0;
     }
     a,
-    img {
+    img,
+    figure {
         display: none;
     }
 }
