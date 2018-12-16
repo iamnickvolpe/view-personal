@@ -21,15 +21,23 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 var io = app.io = require("socket.io")();
+
+var display = {
+  background: "https://images.unsplash.com/photo-1471879832106-c7ab9e0cee23?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1566&q=80",
+  opacity: "0"
+};
+
 io.on("connection", function (socket) {
   socket.emit("data", data);
+  socket.emit("display", display);
   setInterval(function () {
     socket.emit("data", data);
   }, 60000);
 });
 
 app.post('/display', function (req, res) {
-  io.emit('display', req.body);
+  display = req.body;
+  io.emit('display', display);
   res.send("OK");
 });
 

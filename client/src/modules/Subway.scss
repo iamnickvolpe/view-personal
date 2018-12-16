@@ -3,8 +3,7 @@
     .stop {
         display: flex;
         align-items: flex-start;
-        margin-bottom: 1rem;
-        overflow: visible;
+        margin-bottom: 2rem;
         > div {
             margin-right: 1rem;
         }
@@ -26,11 +25,10 @@
         text-transform: uppercase;
         margin-top: 0;
         margin-bottom: .5vw;
-        line-height: 1rem;
-        overflow: visible;
+        line-height: 1.2rem;
     }
     .update {
         font-size: .75vw;
-        line-height: 1rem;
+        line-height: 1.75rem;
     }
 }
