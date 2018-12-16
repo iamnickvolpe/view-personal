@@ -174,13 +174,13 @@ getAllData();
 
 setInterval(function () {
   getAllData();
-}, 18000000); // Remove 0
+}, 1800000);
 
-setInterval(function() {
+setInterval(function () {
   getSubway(function (response) {
     data.subway = response;
   });
-}, 600000) // Remove 0
+}, 60000);
 
 function getAllData() {
   getWeather(function (response) {
@@ -201,7 +201,7 @@ function getAllData() {
 }
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname+'/client/build/index.html'));
+  res.sendFile(path.join(__dirname + '/client/build/index.html'));
 });
 
 module.exports = app;
