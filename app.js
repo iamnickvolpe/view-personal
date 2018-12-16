@@ -2,6 +2,7 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
 var logger = require('morgan');
 var request = require('request');
 const { google } = require('googleapis');
@@ -14,10 +15,23 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'client/build')));
+
+var io = app.io = require("socket.io")();
+io.on("connection", function (socket) {
+  socket.emit("data", data);
+  setInterval(function () {
+    socket.emit("data", data);
+  }, 60000);
+});
+
+app.post('/display', function (req, res) {
+  io.emit('display', req.body);
+  res.send("OK");
+});
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -92,7 +106,7 @@ function getSubway(callback) {
 }
 
 function getWeather(callback) {
-  request('https://api.darksky.net/forecast/54b93be758e0a2a2819376a8419dea32/40.7330999,-73.9577795?exclude=hourly,alerts,flags', function (error, response, body) {
+  request('https://api.darksky.net/forecast/54b93be758e0a2a2819376a8419dea32/40.7330999,-73.9577795?exclude=alerts,flags', function (error, response, body) {
     if (body && !body.error) {
       callback({
         body: JSON.parse(body),
@@ -160,13 +174,13 @@ getAllData();
 
 setInterval(function () {
   getAllData();
-}, 1800000);
+}, 18000000); // Remove 0
 
 setInterval(function() {
   getSubway(function (response) {
     data.subway = response;
   });
-}, 60000)
+}, 600000) // Remove 0
 
 function getAllData() {
   getWeather(function (response) {
@@ -185,14 +199,6 @@ function getAllData() {
     data.feed = response;
   });
 }
-
-var io = app.io = require("socket.io")();
-io.on("connection", function (socket) {
-  socket.emit("data", data);
-  setInterval(function () {
-    socket.emit("data", data);
-  }, 60000);
-});
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname+'/client/build/index.html'));
