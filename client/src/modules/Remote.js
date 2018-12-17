@@ -48,7 +48,6 @@ class Remote extends Component {
     render() {
         return (
             <div>
-                <h1>Remote</h1>
                 <div>
                     <input type="text" placeholder="Search Images..." value={this.state.value} onChange={this.handleChange} />
                     <button onClick={this.changeImage}>Change Image</button>

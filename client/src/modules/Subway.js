@@ -3,7 +3,6 @@ import './Subway.scss';
 import _ from "lodash";
 import Moment from "react-moment";
 import moment from "moment";
-import io from "socket.io-client";
 
 class Subway extends Component {
     state = {
@@ -13,7 +12,7 @@ class Subway extends Component {
 
     componentDidMount() {
         var that = this;
-        io(this.props.apiUrl).on("data", function (data) {
+        this.props.socket.on("data", function (data) {
             if (data.subway) {
                 that.setState({
                     subway: data.subway.body,
@@ -30,7 +29,11 @@ class Subway extends Component {
             subway.forEach(function (line) {
                 line.stops.forEach(function (stop) {
                     stops.push(stop);
-                })
+                });
+                
+                if(line.stops.length > 3) {
+                    line.stops.length = 3;
+                }
             });
         }
         return (

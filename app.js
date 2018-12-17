@@ -21,12 +21,20 @@ var display = {
   opacity: "0"
 };
 
-io.on("connection", function (socket) {
+let interval;
+io.on("connection", socket => {
   socket.emit("data", data);
   socket.emit("display", display);
-  setInterval(function () {
+  console.log("New client connected");
+  if (interval) {
+    clearInterval(interval);
+  }
+  interval = setInterval(function() {
     socket.emit("data", data);
   }, 60000);
+  socket.on("disconnect", () => {
+    console.log("Client disconnected");
+  });
 });
 
 app.post('/api/display', function (req, res) {
@@ -50,7 +58,7 @@ app.post('/api/randomize-background', function(req, res) {
   });
 });
 
-cron.schedule('0 0 7 * *', () => {
+cron.schedule('0 7 * * *', () => {
   socket.emit("display", { opacity: "0" });
 });
 

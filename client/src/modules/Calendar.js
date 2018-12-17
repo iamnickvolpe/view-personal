@@ -3,7 +3,6 @@ import './Calendar.scss';
 import _ from "lodash";
 import Moment from "react-moment";
 import moment from "moment";
-import io from "socket.io-client";
 
 class Calendar extends Component {
     state = {
@@ -13,7 +12,7 @@ class Calendar extends Component {
 
     componentDidMount() {
         var that = this;
-        io(this.props.apiUrl).on("data", function (data) {
+        this.props.socket.on("data", function (data) {
             if (data["calendar-" + that.props.calendar]) {
                 that.setState({
                     calendar: data["calendar-" + that.props.calendar].body,

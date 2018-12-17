@@ -3,7 +3,6 @@ import './Weather.scss';
 import _ from "lodash";
 import moment from "moment";
 import Moment from "react-moment";
-import io from "socket.io-client";
 
 class Weather extends Component {
     state = {
@@ -14,7 +13,7 @@ class Weather extends Component {
 
     componentDidMount() {
         var that = this;
-        io(this.props.apiUrl).on("data", function (data) {
+        this.props.socket.on("data", function (data) {
             if(data.weather) {
                 that.setState({ 
                     updated: data.weather.timestamp, 
