@@ -7,6 +7,7 @@ var logger = require('morgan');
 var request = require('request');
 const { google } = require('googleapis');
 const GtfsRealtimeBindings = require("gtfs-realtime-bindings");
+var cron = require('node-cron');
 
 var app = express();
 
@@ -35,10 +36,29 @@ io.on("connection", function (socket) {
   }, 60000);
 });
 
-app.post('/display', function (req, res) {
-  display = req.body;
+app.post('/api/display', function (req, res) {
+  if (req.body.background) {
+    display.background = req.body.background;
+  }
+  if (req.body.opacity) {
+    display.opacity = req.body.opacity;
+  }
   io.emit('display', display);
   res.send("OK");
+});
+
+app.post('/api/randomize-background', function(req, res) {
+  request('https://api.unsplash.com/photos/random?client_id=3034609ca545d748050da849eda57325b149fdfe99bca1ec0861e9651d36cca0&query='+req.body.q, function (error, response, body) {
+    if (!error && body) {
+      display.background = JSON.parse(body).urls.full;
+      io.emit('display', display);
+      res.send("OK");
+    }
+  });
+});
+
+cron.schedule('0 0 7 * *', () => {
+  socket.emit("display", { opacity: "0" });
 });
 
 // catch 404 and forward to error handler
@@ -173,11 +193,12 @@ function getFeed(callback) {
   });
 }
 
+var data = {};
+
 getSubway(function (response) {
   data.subway = response;
 });
 
-var data = {};
 getAllData();
 
 setInterval(function () {

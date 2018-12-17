@@ -1,0 +1,50 @@
+.cards {
+  display: grid;
+  padding: 3rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  position: absolute;
+  grid-gap: 3rem;
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+  width: 100%;
+  font-family: "Geomanist";
+  letter-spacing: .1em;
+  background-size: cover;
+  background-position: center center;
+}
+
+.module {
+  padding: 2rem;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  border-radius: 10px;
+
+  > div {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .updated {
+    position: absolute;
+    bottom: 0rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 6px 12px;
+    font-size: .65vw;
+    right: 0;
+    margin: 0;
+    font-weight: 400;
+    line-height: 14px;
+    border-top-left-radius: 8px;
+  }
+}
+
+.cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+}

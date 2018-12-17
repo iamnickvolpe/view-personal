@@ -3,6 +3,7 @@ import './Feed.scss';
 import _ from "lodash";
 import Slider from 'react-slick';
 import Moment from 'react-moment';
+import io from "socket.io-client";
 
 class Feed extends Component {
     state = {
@@ -12,7 +13,7 @@ class Feed extends Component {
 
     componentDidMount() {
         var that = this;
-        this.props.socket.on("data", function (data) {
+        io(this.props.apiUrl).on("data", function (data) {
             if (data.feed) {
                 that.setState({
                     updated: data.feed.timestamp,
