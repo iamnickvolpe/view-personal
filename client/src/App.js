@@ -18,7 +18,7 @@ class App extends Component {
       <div>
         <Switch>
           <Route exact path="/" render={(props) => <Remote {...props} socket={socket} />} />
-          <Route exact path="/app" render={(props) => <Home {...props} socket={socket} />} />
+          <Route path="/app" render={(props) => <Home {...props} socket={socket} />} />
         </Switch>
       </div>
     )

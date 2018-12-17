@@ -1,6 +1,5 @@
 var express = require('express');
 var path = require('path');
-var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var request = require('request');
 const { google } = require('googleapis');
@@ -8,11 +7,8 @@ const GtfsRealtimeBindings = require("gtfs-realtime-bindings");
 var cron = require('node-cron');
 
 var app = express();
-
-app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'client/build')));
 
 var io = app.io = require("socket.io")();
 
@@ -47,6 +43,13 @@ app.post('/api/randomize-background', function(req, res) {
       io.emit('display', display);
       res.send("OK");
     }
+  });
+});
+
+app.use(function catchError(req, res, next, err) {
+  console.error('Caught error', err);
+  res.status(500).json({
+      error: err
   });
 });
 
@@ -206,8 +209,12 @@ function getAllData() {
   });
 }
 
-app.get('*', (req,res) =>{
-  res.sendFile(path.join(__dirname+'/client/build/index.html'));
-});
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname, 'client/build/index.html'), function(err) {
+    if (err) {
+      res.status(500).send(err)
+    }
+  })
+})
 
 module.exports = app;

@@ -28,6 +28,9 @@ class Subway extends Component {
             var stops = [];
             subway.forEach(function (line) {
                 line.stops.forEach(function (stop) {
+                    if (stop.updates.length > 3) {
+                        stop.updates.length = 3;
+                    }
                     stops.push(stop);
                 });
             });
@@ -41,7 +44,7 @@ class Subway extends Component {
                                 <div>
                                     <div className={"line-" + stop.line}>{stop.line}</div>
                                 </div>
-                                
+
                                 <div>
                                     <h2 className="group-name">{stop.station}</h2>
                                     {stop.updates.map((update, index) =>
@@ -51,7 +54,7 @@ class Subway extends Component {
                                     )}
                                     {!stop.updates.length ? (
                                         <div className="update">No trains</div>
-                                    ): null}
+                                    ) : null}
                                 </div>
                             </div>
                         )}
