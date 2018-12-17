@@ -21,20 +21,12 @@ var display = {
   opacity: "0"
 };
 
-let interval;
 io.on("connection", socket => {
   socket.emit("data", data);
   socket.emit("display", display);
-  console.log("New client connected");
-  if (interval) {
-    clearInterval(interval);
-  }
-  interval = setInterval(function() {
+  setInterval(function() {
     socket.emit("data", data);
   }, 60000);
-  socket.on("disconnect", () => {
-    console.log("Client disconnected");
-  });
 });
 
 app.post('/api/display', function (req, res) {

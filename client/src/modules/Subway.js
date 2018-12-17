@@ -30,10 +30,6 @@ class Subway extends Component {
                 line.stops.forEach(function (stop) {
                     stops.push(stop);
                 });
-                
-                if(line.stops.length > 3) {
-                    line.stops.length = 3;
-                }
             });
         }
         return (
