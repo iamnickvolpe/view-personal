@@ -33,7 +33,7 @@ class Home extends Component {
                 <div className="cards" style={{ backgroundImage: `url(${this.state.background})` }}>
                     <Time color="rgba(0, 0, 0, 0.25)" />
                     <Calendar socket={this.props.socket} color="rgb(121, 112, 255)" calendar="7afrbvotf8p1qcjcpbqp2639as@group.calendar.google.com" />
-                    <Calendar socket={this.props.socket} color="rgb(253, 147, 72)" calendar="nick@iamnickvolpe.com" />
+                    <Calendar socket={this.props.socket} color="rgb(253, 147, 72)" calendar="iamnickvolpe@gmail.com" />
                     <Calendar socket={this.props.socket} color="rgb(210, 102, 255)" calendar="jenn.sager@gmail.com" />
                     <Weather socket={this.props.socket} color="rgba(0, 0, 0, 0.25)" />
                     <Subway socket={this.props.socket} color="rgba(0, 0, 0, 0.25)" />

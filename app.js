@@ -201,8 +201,8 @@ function getAllData() {
   getCalendar("7afrbvotf8p1qcjcpbqp2639as@group.calendar.google.com", function (response) {
     data["calendar-7afrbvotf8p1qcjcpbqp2639as@group.calendar.google.com"] = response;
   });
-  getCalendar("nick@iamnickvolpe.com", function (response) {
-    data["calendar-nick@iamnickvolpe.com"] = response;
+  getCalendar("iamnickvolpe@gmail.com", function (response) {
+    data["calendar-iamnickvolpe@gmail.com"] = response;
   });
   getCalendar("jenn.sager@gmail.com", function (response) {
     data["calendar-jenn.sager@gmail.com"] = response;
