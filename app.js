@@ -21,10 +21,11 @@ var display = {
 io.on("connection", socket => {
   socket.emit("data", data);
   socket.emit("display", display);
-  setInterval(function() {
-    socket.emit("data", data);
-  }, 60000);
 });
+
+setInterval(function () {
+  io.emit("data", data);
+}, 60000);
 
 app.post('/api/display', function (req, res) {
   if (req.body.background) {
@@ -37,8 +38,8 @@ app.post('/api/display', function (req, res) {
   res.send("OK");
 });
 
-app.post('/api/randomize-background', function(req, res) {
-  request('https://api.unsplash.com/photos/random?client_id=3034609ca545d748050da849eda57325b149fdfe99bca1ec0861e9651d36cca0&query='+req.body.q, function (error, response, body) {
+app.post('/api/randomize-background', function (req, res) {
+  request('https://api.unsplash.com/photos/random?client_id=3034609ca545d748050da849eda57325b149fdfe99bca1ec0861e9651d36cca0&query=' + req.body.q, function (error, response, body) {
     if (!error && body) {
       display.background = JSON.parse(body).urls.full;
       io.emit('display', display);
@@ -50,12 +51,13 @@ app.post('/api/randomize-background', function(req, res) {
 app.use(function catchError(req, res, next, err) {
   console.error('Caught error', err);
   res.status(500).json({
-      error: err
+    error: err
   });
 });
 
 cron.schedule('0 7 * * *', () => {
-  socket.emit("display", { opacity: "0" });
+  display.opacity = "0";
+  io.emit("display", display);
 });
 
 function getSubway(callback) {
@@ -210,8 +212,8 @@ function getAllData() {
   });
 }
 
-app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname, 'client/build/index.html'), function(err) {
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'client/build/index.html'), function (err) {
     if (err) {
       res.status(500).send(err)
     }
