@@ -6,6 +6,7 @@
     "client": "cd client && PORT=3001 yarn start",
     "server": "nodemon ./bin/www",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "heroku-postbuild": "cd client && npm install",
     "start": "node ./bin/www"
   },
   "dependencies": {

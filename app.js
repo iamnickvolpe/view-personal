@@ -9,6 +9,7 @@ var cron = require('node-cron');
 var app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 var io = app.io = require("socket.io")();
 
