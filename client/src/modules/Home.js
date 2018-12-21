@@ -31,12 +31,12 @@ class Home extends Component {
         return (
             <div>
                 <div className="cards" style={{ backgroundImage: `url(${this.state.background})` }}>
-                    <Time color="rgba(0, 0, 0, 0.25)" />
+                    <Time color="rgba(0, 0, 0, 0.35)" />
                     <Calendar socket={this.props.socket} color="rgb(121, 112, 255)" calendar="7afrbvotf8p1qcjcpbqp2639as@group.calendar.google.com" />
                     <Calendar socket={this.props.socket} color="rgb(253, 147, 72)" calendar="iamnickvolpe@gmail.com" />
                     <Calendar socket={this.props.socket} color="rgb(210, 102, 255)" calendar="jenn.sager@gmail.com" />
-                    <Weather socket={this.props.socket} color="rgba(0, 0, 0, 0.25)" />
-                    <Subway socket={this.props.socket} color="rgba(0, 0, 0, 0.25)" />
+                    <Weather socket={this.props.socket} color="rgba(0, 0, 0, 0.35)" />
+                    <Subway socket={this.props.socket} color="rgba(0, 0, 0, 0.35)" />
                     <Feed socket={this.props.socket} color="white" />
                 </div>
                 <div className="cover" style={{ opacity: this.state.opacity }}></div>

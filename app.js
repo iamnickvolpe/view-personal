@@ -41,7 +41,7 @@ app.post('/api/display', function (req, res) {
 app.post('/api/randomize-background', function (req, res) {
   request('https://api.unsplash.com/photos/random?client_id=3034609ca545d748050da849eda57325b149fdfe99bca1ec0861e9651d36cca0&query=' + req.body.q, function (error, response, body) {
     if (!error && body) {
-      display.background = JSON.parse(body).urls.full;
+      display.background = JSON.parse(body).urls.regular;
       io.emit('display', display);
       res.send("OK");
     }
@@ -58,6 +58,8 @@ app.use(function catchError(req, res, next, err) {
 cron.schedule('0 7 * * *', () => {
   display.opacity = "0";
   io.emit("display", display);
+}, {
+  timezone: "America/New_York"
 });
 
 function getSubway(callback) {
