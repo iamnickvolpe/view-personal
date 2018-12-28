@@ -6,19 +6,21 @@ import Remote from './modules/Remote.js'
 import { Route, Switch } from 'react-router-dom';
 import io from "socket.io-client";
 
+function getSocket() {
+  if (process.env.NODE_ENV === "development") {
+    return io("localhost:3000");
+  } else {
+    return io();
+  }
+}
+
 class App extends Component {
   render() {
-    let socket;
-    if (process.env.NODE_ENV === "development") {
-      socket = io("localhost:3000");
-    } else {
-      socket = io();
-    }
     return (
       <div>
         <Switch>
-          <Route exact path="/" render={(props) => <Remote {...props} socket={socket} />} />
-          <Route path="/app" render={(props) => <Home {...props} socket={socket} />} />
+          <Route exact path="/" render={(props) => <Remote {...props} socket={getSocket()} />} />
+          <Route path="/app" render={(props) => <Home {...props} socket={getSocket()} />} />
         </Switch>
       </div>
     )

@@ -48,3 +48,16 @@
   left: 0;
   background-color: black;
 }
+
+@media only screen and (max-width: 800px) {
+  .cards {
+    display: block;
+    padding: 1rem;
+    background-repeat: repeat;
+  }
+
+  .module {
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+}
