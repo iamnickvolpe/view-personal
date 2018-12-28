@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Remote.scss';
 
 class Remote extends Component {
     constructor(props) {
@@ -47,12 +48,12 @@ class Remote extends Component {
 
     render() {
         return (
-            <div>
-                <div>
+            <div className="remote">
+                <div className="card image">
                     <input type="text" placeholder="Search Images..." value={this.state.value} onChange={this.handleChange} />
                     <button onClick={this.changeImage}>Change Image</button>
                 </div>
-                <div>
+                <div className="card opacity">
                     <button onClick={() => this.changeOpacity("0")}>100%</button>
                     <button onClick={() => this.changeOpacity(".5")}>50%</button>
                     <button onClick={() => this.changeOpacity("1")}>0%</button>

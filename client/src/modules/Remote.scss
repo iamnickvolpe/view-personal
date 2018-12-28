@@ -1,0 +1,53 @@
+.remote {
+    padding: 1rem;
+    font-family: sans-serif;
+    background-image: linear-gradient(to bottom, #FDB775 0%, #BD394B 100%);
+    bottom: 0;
+    top: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    .card {
+        background-color: white;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 6px;
+        &.opacity {
+            button {
+                height: 3rem;
+                width: 3rem;
+                border: 0;
+                background-color: #8c42ff;
+                color: white;
+                border-radius: 50%;
+                margin-right: 1rem;
+                font-size: 12px;
+                font-weight: bold;
+            }
+        }
+        &.image {
+            button {
+                height: 40px;
+                line-height: 40px;
+                background-color: #8c42ff;
+                border: 0;
+                color: white;
+                font-size: 14px;
+                padding: 0 1rem;
+                border-radius: 4px;
+            }
+            input {
+                height: 40px;
+                line-height: 40px;
+                border: 2px solid #8c42ff;
+                color: white;
+                font-size: 14px;
+                padding: 0 1rem;
+                color: #8c42ff;
+                margin-right: 1rem;
+                border-radius: 4px;
+            }
+        }
+    }
+}
