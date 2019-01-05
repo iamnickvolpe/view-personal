@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/static/media/hinted-Geomanist-Book.2cd42352.ttf"
   },
   {
-    "revision": "e50e981a0ceb48918240",
-    "url": "/static/css/main.e250fba0.chunk.css"
+    "revision": "8465dc5e813e87d7205d",
+    "url": "/static/css/main.266c8c7c.chunk.css"
   },
   {
     "revision": "410b95be823e4ee434076abac8d5f920",
@@ -108,8 +108,8 @@ self.__precacheManifest = [
     "url": "/static/media/hinted-Geomanist-Bold.8ee66126.woff"
   },
   {
-    "revision": "e50e981a0ceb48918240",
-    "url": "/static/js/main.e50e981a.chunk.js"
+    "revision": "8465dc5e813e87d7205d",
+    "url": "/static/js/main.8465dc5e.chunk.js"
   },
   {
     "revision": "408c1796ff8817b94dec654bf9e03bff",
@@ -120,20 +120,20 @@ self.__precacheManifest = [
     "url": "/static/media/hinted-Geomanist-Thin.53d379f5.ttf"
   },
   {
-    "revision": "d9b7bb752725bda1503fa224cd098897",
-    "url": "/static/media/hinted-Geomanist-Light.d9b7bb75.ttf"
-  },
-  {
     "revision": "473be0a589fa59da45949419f68153ff",
     "url": "/static/media/hinted-Geomanist-Light.473be0a5.eot"
   },
   {
-    "revision": "10b68d73dfa6ed69224a2a855ee3934a",
-    "url": "/static/media/hinted-Geomanist-Black.10b68d73.ttf"
+    "revision": "d9b7bb752725bda1503fa224cd098897",
+    "url": "/static/media/hinted-Geomanist-Light.d9b7bb75.ttf"
   },
   {
     "revision": "a815cf4a76bbbf6c41b0320df49ffd2e",
     "url": "/static/media/hinted-Geomanist-Black.a815cf4a.eot"
+  },
+  {
+    "revision": "10b68d73dfa6ed69224a2a855ee3934a",
+    "url": "/static/media/hinted-Geomanist-Black.10b68d73.ttf"
   },
   {
     "revision": "e92de74905d33fc4b742f2670402a566",
@@ -156,12 +156,12 @@ self.__precacheManifest = [
     "url": "/static/media/hinted-Geomanist-ExtraLight.02d7c5c2.ttf"
   },
   {
-    "revision": "7d09ace2a3d6e30c3ff036946db8e0ee",
-    "url": "/static/media/hinted-Geomanist-Medium.7d09ace2.ttf"
-  },
-  {
     "revision": "f4f2e5e6c5b45de24fc69c93e13c0f8b",
     "url": "/static/media/hinted-Geomanist-Medium.f4f2e5e6.eot"
+  },
+  {
+    "revision": "7d09ace2a3d6e30c3ff036946db8e0ee",
+    "url": "/static/media/hinted-Geomanist-Medium.7d09ace2.ttf"
   },
   {
     "revision": "3bb3604bde6f8194e4350250114b5d36",
@@ -180,16 +180,16 @@ self.__precacheManifest = [
     "url": "/static/media/hinted-Geomanist-Ultra.a865d09f.ttf"
   },
   {
+    "revision": "d8e472e7283476647cd45a96df252b14",
+    "url": "/static/media/hinted-Geomanist-Book.d8e472e7.svg"
+  },
+  {
     "revision": "bf760cb1e6f0585c2bff64091c4eadd0",
     "url": "/static/media/hinted-Geomanist-Thin.bf760cb1.svg"
   },
   {
     "revision": "1c9b41f9befa54d730cbaff9b7e95f37",
     "url": "/static/media/hinted-Geomanist-Light.1c9b41f9.svg"
-  },
-  {
-    "revision": "d8e472e7283476647cd45a96df252b14",
-    "url": "/static/media/hinted-Geomanist-Book.d8e472e7.svg"
   },
   {
     "revision": "97b0221dd5eecee3211d57ae6e3fd0b6",
@@ -216,7 +216,7 @@ self.__precacheManifest = [
     "url": "/static/css/1.947a9fdc.chunk.css"
   },
   {
-    "revision": "dfd4e1f98239372099287c697585b087",
+    "revision": "72a695a2a7ce854285231600a3ebd89e",
     "url": "/index.html"
   }
 ];
