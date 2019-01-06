@@ -5,8 +5,8 @@ import './Time.scss';
 class Time extends Component {
   componentDidMount() {
     var canvas = this.refs.canvas;
-    canvas.width = this.refs.clockWrapper.clientWidth;
-    canvas.height = this.refs.clockWrapper.clientWidth;
+    canvas.width = this.refs.clockWrapper.clientWidth * 0.8;
+    canvas.height = this.refs.clockWrapper.clientWidth * 0.8;
 
     const ctx = this.refs.canvas.getContext('2d');
     var radius = canvas.height / 4;
