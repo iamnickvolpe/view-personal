@@ -5,17 +5,15 @@ import './Time.scss';
 class Time extends Component {
   componentDidMount() {
     var canvas = this.refs.canvas;
-    canvas.width = 2000;
-    canvas.height = 2000;
-    canvas.style.width = "80%";
-    canvas.style.height = "80%";
+    canvas.width = this.refs.clockWrapper.clientWidth;
+    canvas.height = this.refs.clockWrapper.clientWidth;
 
     const ctx = this.refs.canvas.getContext('2d');
     var radius = canvas.height / 4;
     ctx.scale(2, 2);
     ctx.translate(radius, radius);
     radius = radius * 0.8;
-    
+
     setInterval(function () {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.save();
@@ -64,17 +62,17 @@ class Time extends Component {
 
       var totalDistanceMS = yearEndMS - yearStartMS;
       var totalDistanceRadians = 2 * Math.PI;
-      
+
       var distanceMS = ms - yearStartMS;
 
       var distanceRatio = distanceMS / totalDistanceMS;
-      
+
       return totalDistanceRadians * distanceRatio - (.5 * Math.PI);
     }
 
     function drawSeasons(ctx, radius) {
       var now = new Date();
-      var winterStartMS = new Date(now.getFullYear() -1, 11, 21).getTime();
+      var winterStartMS = new Date(now.getFullYear() - 1, 11, 21).getTime();
       var winterEndMS = new Date(now.getFullYear(), 2, 20).getTime();
 
       var springStartMS = new Date(now.getFullYear(), 2, 20).getTime();
@@ -84,33 +82,33 @@ class Time extends Component {
       var summerEndMS = new Date(now.getFullYear(), 8, 23).getTime();
 
       var fallStartMS = new Date(now.getFullYear(), 8, 23).getTime();
-      var fallEndMS = new Date(now.getFullYear() -1, 11, 21).getTime();
+      var fallEndMS = new Date(now.getFullYear() - 1, 11, 21).getTime();
 
       ctx.beginPath();
-      ctx.strokeStyle= "#8FE4FF";
+      ctx.strokeStyle = "#8FE4FF";
       ctx.lineWidth = radius * 0.06;
-      ctx.arc(0, 0, radius, getPosition(winterStartMS), getPosition(winterEndMS) -0.05);
+      ctx.arc(0, 0, radius, getPosition(winterStartMS), getPosition(winterEndMS) - 0.05);
       ctx.stroke();
       ctx.closePath();
 
       ctx.beginPath();
-      ctx.strokeStyle= "#BCFF79";
+      ctx.strokeStyle = "#BCFF79";
       ctx.lineWidth = radius * 0.06;
-      ctx.arc(0, 0, radius, getPosition(springStartMS), getPosition(springEndMS) -0.05);
+      ctx.arc(0, 0, radius, getPosition(springStartMS), getPosition(springEndMS) - 0.05);
       ctx.stroke();
       ctx.closePath();
 
       ctx.beginPath();
-      ctx.strokeStyle= "#FFED48";
+      ctx.strokeStyle = "#FFED48";
       ctx.lineWidth = radius * 0.06;
-      ctx.arc(0, 0, radius, getPosition(summerStartMS), getPosition(summerEndMS) -0.05);
+      ctx.arc(0, 0, radius, getPosition(summerStartMS), getPosition(summerEndMS) - 0.05);
       ctx.stroke();
       ctx.closePath();
 
       ctx.beginPath();
-      ctx.strokeStyle= "#FFBC7E";
+      ctx.strokeStyle = "#FFBC7E";
       ctx.lineWidth = radius * 0.06;
-      ctx.arc(0, 0, radius, getPosition(fallStartMS), getPosition(fallEndMS) -0.05);
+      ctx.arc(0, 0, radius, getPosition(fallStartMS), getPosition(fallEndMS) - 0.05);
       ctx.stroke();
       ctx.closePath();
     }
@@ -150,7 +148,10 @@ class Time extends Component {
           <div className="date">
             <Moment format="dddd, MMMM Do" />
           </div>
-          <div className="clock"><canvas ref="canvas"></canvas></div>
+
+          <div ref="clockWrapper" className="clock">
+            <canvas ref="canvas"></canvas>
+          </div>
         </div>
       </div>
     );
