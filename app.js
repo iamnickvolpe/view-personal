@@ -166,7 +166,7 @@ function getFeed(callback) {
   request({
     url: "http://cloud.feedly.com/v3/streams/contents?streamId=user/8f218b41-7fae-402b-b813-ff52f256c980/category/global.all",
     headers: {
-      Authorization: "OAuth A15B2tCZUop8VghggYrOxMcqAV7FYJdhcxjapTYxvM-hqRyan0zxyIHRfWnrRp5Wv3mdPUIl_xdXcdOlPLqPxbQVrTTZswS8uudhLd0rl_6gen1KbdSvPckqzHmzprAuAL-7MzmAxFuqVhNekj10FHKcto_vNnRi6kPQNvP_QcPyQIR0w37NFjNONLxjX6qd1noHINoIRRsPker_nLwYm2PIwU7WDBlLljvV5qjhUwDN0Q3oI9bzNC1VjDLU:feedlydev"
+      Authorization: "OAuth AzaM8tJ8q1S-Zubor7JqKhNsgwPfKRVw8K3HuxFya7S1BhD7N6hcKFTPWaRhkZX8kHIpkKE6The_zGyjr0hh9K8N7S9anZrm_mXXZMNxAERpz_5rqRkCo9AzNQlooM7SUT_JlmLh7J6TwCzkhZglc6oXZE6Rmm5lOmxCjT2mKwzTImvghaifaUSEhJTUN1TNgU_TFmILpH0jhj8IxT3tuEcn0KMYVq5C_pUngmRyGiGSOakTnPi8P7aVmYNp:feedlydev"
     }
   }, function (error, response, body) {
     if (response && !error && !JSON.parse(body).errorCode) {
