@@ -8,7 +8,7 @@ class Time extends Component {
     var canvas = this.refs.canvas;
 
     setInterval(function () {
-      var width = that.refs.clockWrapper.clientWidth;
+      var width = that.refs.clockWrapper.clientWidth * .8;
       canvas.width = width * 2;
       canvas.height = width * 2;
       canvas.style.width = width + "px";

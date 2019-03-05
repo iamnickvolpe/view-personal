@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/static/media/hinted-Geomanist-Book.2cd42352.ttf"
   },
   {
-    "revision": "054990f3da7519d8b1c8",
-    "url": "/static/css/main.2230c64c.chunk.css"
+    "revision": "25bf34a30e302875b28f",
+    "url": "/static/css/main.e031babf.chunk.css"
   },
   {
     "revision": "410b95be823e4ee434076abac8d5f920",
@@ -24,16 +24,16 @@ self.__precacheManifest = [
     "url": "/static/media/slick.ced611da.eot"
   },
   {
-    "revision": "f97e3bbf73254b0112091d0192f17aec",
-    "url": "/static/media/slick.f97e3bbf.svg"
-  },
-  {
     "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
     "url": "/static/media/slick.b7c9e1e4.woff"
   },
   {
     "revision": "d41f55a78e6f49a5512878df1737e58a",
     "url": "/static/media/slick.d41f55a7.ttf"
+  },
+  {
+    "revision": "f97e3bbf73254b0112091d0192f17aec",
+    "url": "/static/media/slick.f97e3bbf.svg"
   },
   {
     "revision": "4743d4c551199fe7b278801cf21e8fd2",
@@ -108,8 +108,8 @@ self.__precacheManifest = [
     "url": "/static/media/hinted-Geomanist-Bold.8ee66126.woff"
   },
   {
-    "revision": "054990f3da7519d8b1c8",
-    "url": "/static/js/main.054990f3.chunk.js"
+    "revision": "25bf34a30e302875b28f",
+    "url": "/static/js/main.25bf34a3.chunk.js"
   },
   {
     "revision": "408c1796ff8817b94dec654bf9e03bff",
@@ -128,48 +128,48 @@ self.__precacheManifest = [
     "url": "/static/media/hinted-Geomanist-Light.d9b7bb75.ttf"
   },
   {
-    "revision": "a815cf4a76bbbf6c41b0320df49ffd2e",
-    "url": "/static/media/hinted-Geomanist-Black.a815cf4a.eot"
-  },
-  {
     "revision": "10b68d73dfa6ed69224a2a855ee3934a",
     "url": "/static/media/hinted-Geomanist-Black.10b68d73.ttf"
+  },
+  {
+    "revision": "a815cf4a76bbbf6c41b0320df49ffd2e",
+    "url": "/static/media/hinted-Geomanist-Black.a815cf4a.eot"
   },
   {
     "revision": "e92de74905d33fc4b742f2670402a566",
     "url": "/static/media/hinted-Geomanist-Book.e92de749.eot"
   },
   {
-    "revision": "e5acac3a3e923990ebced19422ac5490",
-    "url": "/static/media/hinted-Geomanist-Regular.e5acac3a.eot"
+    "revision": "f86d0458efc9fc80b2bd2ca1a94ba5a5",
+    "url": "/static/media/hinted-Geomanist-Regular.f86d0458.ttf"
   },
   {
     "revision": "eaa76f2a570377220a75bc64a2522262",
     "url": "/static/media/hinted-Geomanist-ExtraLight.eaa76f2a.eot"
   },
   {
-    "revision": "f86d0458efc9fc80b2bd2ca1a94ba5a5",
-    "url": "/static/media/hinted-Geomanist-Regular.f86d0458.ttf"
+    "revision": "02d7c5c232610fcd751331356cf90787",
+    "url": "/static/media/hinted-Geomanist-ExtraLight.02d7c5c2.ttf"
+  },
+  {
+    "revision": "e5acac3a3e923990ebced19422ac5490",
+    "url": "/static/media/hinted-Geomanist-Regular.e5acac3a.eot"
   },
   {
     "revision": "f4f2e5e6c5b45de24fc69c93e13c0f8b",
     "url": "/static/media/hinted-Geomanist-Medium.f4f2e5e6.eot"
   },
   {
-    "revision": "02d7c5c232610fcd751331356cf90787",
-    "url": "/static/media/hinted-Geomanist-ExtraLight.02d7c5c2.ttf"
-  },
-  {
     "revision": "7d09ace2a3d6e30c3ff036946db8e0ee",
     "url": "/static/media/hinted-Geomanist-Medium.7d09ace2.ttf"
   },
   {
-    "revision": "1f73dcd478c2dbf9f6ced110c6af1e67",
-    "url": "/static/media/hinted-Geomanist-Bold.1f73dcd4.ttf"
-  },
-  {
     "revision": "3bb3604bde6f8194e4350250114b5d36",
     "url": "/static/media/hinted-Geomanist-Bold.3bb3604b.eot"
+  },
+  {
+    "revision": "1f73dcd478c2dbf9f6ced110c6af1e67",
+    "url": "/static/media/hinted-Geomanist-Bold.1f73dcd4.ttf"
   },
   {
     "revision": "ab8ccfe4ffce0e2a3643f1961645f7e1",
@@ -192,12 +192,12 @@ self.__precacheManifest = [
     "url": "/static/media/hinted-Geomanist-Light.1c9b41f9.svg"
   },
   {
-    "revision": "df48c09c01a591c0b8c187a694fcc16e",
-    "url": "/static/media/hinted-Geomanist-Medium.df48c09c.svg"
-  },
-  {
     "revision": "97b0221dd5eecee3211d57ae6e3fd0b6",
     "url": "/static/media/hinted-Geomanist-Regular.97b0221d.svg"
+  },
+  {
+    "revision": "df48c09c01a591c0b8c187a694fcc16e",
+    "url": "/static/media/hinted-Geomanist-Medium.df48c09c.svg"
   },
   {
     "revision": "28a8fc7f82c9f15e515aa684319e995c",
@@ -216,7 +216,7 @@ self.__precacheManifest = [
     "url": "/static/css/1.c368f345.chunk.css"
   },
   {
-    "revision": "53fd24e0229d8cac50a266cf4e779963",
+    "revision": "f98d2e5db998a9cbe36df2b2cf41002c",
     "url": "/index.html"
   }
 ];
