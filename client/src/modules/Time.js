@@ -8,16 +8,14 @@ class Time extends Component {
     var canvas = this.refs.canvas;
 
     setInterval(function () {
-      var dpr = window.devicePixelRatio || 1;
-      var width = that.refs.clockWrapper.clientWidth * dpr
-      canvas.width = width;
-      canvas.height = width;
-      canvas.style.width = width / 2 + "px";
-      canvas.style.height = width / 2 + "px";
+      var width = that.refs.clockWrapper.clientWidth;
+      canvas.width = width * 2;
+      canvas.height = width * 2;
+      canvas.style.width = width + "px";
+      canvas.style.height = width + "px";
       const ctx = that.refs.canvas.getContext('2d');
       var radius = canvas.height / 4;
       ctx.scale(2, 2);
-      console.log(ctx)
       ctx.translate(radius, radius);
       radius = radius * 0.8;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
