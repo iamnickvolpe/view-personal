@@ -4,23 +4,26 @@ import './Time.scss';
 
 class Time extends Component {
   componentDidMount() {
+    var that = this;
     var canvas = this.refs.canvas;
-    canvas.width = this.refs.clockWrapper.clientWidth * 0.8;
-    canvas.height = this.refs.clockWrapper.clientWidth * 0.8;
-
-    const ctx = this.refs.canvas.getContext('2d');
-    var radius = canvas.height / 4;
-    ctx.scale(2, 2);
-    ctx.translate(radius, radius);
-    radius = radius * 0.8;
 
     setInterval(function () {
+      var dpr = window.devicePixelRatio || 1;
+      var width = that.refs.clockWrapper.clientWidth * dpr
+      canvas.width = width;
+      canvas.height = width;
+      canvas.style.width = width / 2 + "px";
+      canvas.style.height = width / 2 + "px";
+      const ctx = that.refs.canvas.getContext('2d');
+      var radius = canvas.height / 4;
+      ctx.scale(2, 2);
+      console.log(ctx)
+      ctx.translate(radius, radius);
+      radius = radius * 0.8;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.save();
       drawNumbers(ctx, radius);
       drawSeasons(ctx, radius);
       drawTime(ctx, radius);
-      ctx.restore();
     }, 1000);
 
     function drawNumbers(ctx, radius) {

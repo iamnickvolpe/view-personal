@@ -72,14 +72,14 @@ function getSubway(callback) {
         {
           color: "#6CBE45",
           id: "G26N",
-          station: "Greenpoint Ave. G Uptown",
+          station: "Court Square",
           line: "G",
           updates: []
         },
         {
           color: "#6CBE45",
           id: "G26S",
-          station: "Greenpoint Ave. G Downtown",
+          station: "Church Ave.",
           line: "G",
           updates: []
         }
