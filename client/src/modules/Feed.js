@@ -18,14 +18,15 @@ class Feed extends Component {
                     updated: data.feed.timestamp,
                     feed: data.feed.body
                 });
-                console.log(data.feed)
             }
         });
         this.createMarkup = this.createMarkup.bind(this);
     }
 
     createMarkup(markup) {
-        return { __html: markup };
+        if (markup) {
+            return { __html: markup };
+        }
     }
 
     render() {
@@ -55,7 +56,7 @@ class Feed extends Component {
                                     <div className="content">
                                         <h1 className="title">{item.title}</h1>
                                         <p className="published">{item.origin.title} &bull; <Moment fromNow>{item.published}</Moment></p>
-                                        <p className="summary" dangerouslySetInnerHTML={this.createMarkup(item.summary?(item.summary.content):(item.content.content))}></p>
+                                        <p className="summary" dangerouslySetInnerHTML={this.createMarkup(item.summary ? (item.summary.content) : null)}></p>
                                     </div>
                                 </div>
                             )}

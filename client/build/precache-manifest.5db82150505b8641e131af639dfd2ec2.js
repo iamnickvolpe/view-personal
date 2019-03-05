@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/hinted-Geomanist-Book.2cd42352.ttf"
   },
   {
-    "revision": "25bf34a30e302875b28f",
+    "revision": "7788d687bb51975b6878",
     "url": "/static/css/main.e031babf.chunk.css"
   },
   {
@@ -28,12 +28,12 @@ self.__precacheManifest = [
     "url": "/static/media/slick.b7c9e1e4.woff"
   },
   {
-    "revision": "d41f55a78e6f49a5512878df1737e58a",
-    "url": "/static/media/slick.d41f55a7.ttf"
-  },
-  {
     "revision": "f97e3bbf73254b0112091d0192f17aec",
     "url": "/static/media/slick.f97e3bbf.svg"
+  },
+  {
+    "revision": "d41f55a78e6f49a5512878df1737e58a",
+    "url": "/static/media/slick.d41f55a7.ttf"
   },
   {
     "revision": "4743d4c551199fe7b278801cf21e8fd2",
@@ -108,28 +108,24 @@ self.__precacheManifest = [
     "url": "/static/media/hinted-Geomanist-Bold.8ee66126.woff"
   },
   {
-    "revision": "25bf34a30e302875b28f",
-    "url": "/static/js/main.25bf34a3.chunk.js"
+    "revision": "7788d687bb51975b6878",
+    "url": "/static/js/main.7788d687.chunk.js"
   },
   {
     "revision": "408c1796ff8817b94dec654bf9e03bff",
     "url": "/static/media/hinted-Geomanist-Thin.408c1796.eot"
   },
   {
-    "revision": "53d379f50c244ffef12a5df6234f7b6c",
-    "url": "/static/media/hinted-Geomanist-Thin.53d379f5.ttf"
-  },
-  {
     "revision": "473be0a589fa59da45949419f68153ff",
     "url": "/static/media/hinted-Geomanist-Light.473be0a5.eot"
   },
   {
-    "revision": "d9b7bb752725bda1503fa224cd098897",
-    "url": "/static/media/hinted-Geomanist-Light.d9b7bb75.ttf"
+    "revision": "53d379f50c244ffef12a5df6234f7b6c",
+    "url": "/static/media/hinted-Geomanist-Thin.53d379f5.ttf"
   },
   {
-    "revision": "10b68d73dfa6ed69224a2a855ee3934a",
-    "url": "/static/media/hinted-Geomanist-Black.10b68d73.ttf"
+    "revision": "d9b7bb752725bda1503fa224cd098897",
+    "url": "/static/media/hinted-Geomanist-Light.d9b7bb75.ttf"
   },
   {
     "revision": "a815cf4a76bbbf6c41b0320df49ffd2e",
@@ -140,6 +136,14 @@ self.__precacheManifest = [
     "url": "/static/media/hinted-Geomanist-Book.e92de749.eot"
   },
   {
+    "revision": "10b68d73dfa6ed69224a2a855ee3934a",
+    "url": "/static/media/hinted-Geomanist-Black.10b68d73.ttf"
+  },
+  {
+    "revision": "e5acac3a3e923990ebced19422ac5490",
+    "url": "/static/media/hinted-Geomanist-Regular.e5acac3a.eot"
+  },
+  {
     "revision": "f86d0458efc9fc80b2bd2ca1a94ba5a5",
     "url": "/static/media/hinted-Geomanist-Regular.f86d0458.ttf"
   },
@@ -148,16 +152,12 @@ self.__precacheManifest = [
     "url": "/static/media/hinted-Geomanist-ExtraLight.eaa76f2a.eot"
   },
   {
-    "revision": "02d7c5c232610fcd751331356cf90787",
-    "url": "/static/media/hinted-Geomanist-ExtraLight.02d7c5c2.ttf"
-  },
-  {
-    "revision": "e5acac3a3e923990ebced19422ac5490",
-    "url": "/static/media/hinted-Geomanist-Regular.e5acac3a.eot"
-  },
-  {
     "revision": "f4f2e5e6c5b45de24fc69c93e13c0f8b",
     "url": "/static/media/hinted-Geomanist-Medium.f4f2e5e6.eot"
+  },
+  {
+    "revision": "02d7c5c232610fcd751331356cf90787",
+    "url": "/static/media/hinted-Geomanist-ExtraLight.02d7c5c2.ttf"
   },
   {
     "revision": "7d09ace2a3d6e30c3ff036946db8e0ee",
@@ -192,20 +192,20 @@ self.__precacheManifest = [
     "url": "/static/media/hinted-Geomanist-Light.1c9b41f9.svg"
   },
   {
-    "revision": "97b0221dd5eecee3211d57ae6e3fd0b6",
-    "url": "/static/media/hinted-Geomanist-Regular.97b0221d.svg"
+    "revision": "5088d6b50314d01b33ebb3121d65d0f4",
+    "url": "/static/media/hinted-Geomanist-ExtraLight.5088d6b5.svg"
   },
   {
     "revision": "df48c09c01a591c0b8c187a694fcc16e",
     "url": "/static/media/hinted-Geomanist-Medium.df48c09c.svg"
   },
   {
-    "revision": "28a8fc7f82c9f15e515aa684319e995c",
-    "url": "/static/media/hinted-Geomanist-Bold.28a8fc7f.svg"
+    "revision": "97b0221dd5eecee3211d57ae6e3fd0b6",
+    "url": "/static/media/hinted-Geomanist-Regular.97b0221d.svg"
   },
   {
-    "revision": "5088d6b50314d01b33ebb3121d65d0f4",
-    "url": "/static/media/hinted-Geomanist-ExtraLight.5088d6b5.svg"
+    "revision": "28a8fc7f82c9f15e515aa684319e995c",
+    "url": "/static/media/hinted-Geomanist-Bold.28a8fc7f.svg"
   },
   {
     "revision": "1af89e25e1488a4d40ffbe236c4ee052",
@@ -216,7 +216,7 @@ self.__precacheManifest = [
     "url": "/static/css/1.c368f345.chunk.css"
   },
   {
-    "revision": "f98d2e5db998a9cbe36df2b2cf41002c",
+    "revision": "22a0f2bd3a165d1b2ee64f46c6557a84",
     "url": "/index.html"
   }
 ];
