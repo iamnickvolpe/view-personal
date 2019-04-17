@@ -61,6 +61,10 @@
 }
 
 @media only screen and (max-width: 800px) {
+  .cover {
+    display: none !important;
+  }
+  
   .cards {
     display: block;
     background-image: none !important;
