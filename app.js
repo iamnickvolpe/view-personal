@@ -186,7 +186,6 @@ getSubway(function (response) {
   data.subway = response;
 });
 
-/*
 getAllData();
 
 setInterval(function () {
@@ -198,7 +197,6 @@ setInterval(function () {
     data.subway = response;
   });
 }, 60000);
-*/
 
 function getAllData() {
   getWeather(function (response) {

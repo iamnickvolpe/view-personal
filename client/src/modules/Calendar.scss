@@ -20,12 +20,12 @@
     }
     .event {
         display: flex;
-        margin-bottom: .75em;
+        line-height: 2;
     }
     .time,
     .summary {
         margin: 0;
-        font-size: $font-size-small;
+        font-size: $font-size-medium;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;

@@ -39,7 +39,7 @@ class Home extends Component {
                     <Subway socket={this.props.socket} color="rgba(0, 0, 0, 0.35)" />
                     <Feed socket={this.props.socket} color="white" />
                 </div>
-                {/*<div className="cover" style={{ opacity: this.state.opacity }}></div>*/}
+                <div className="cover" style={{ opacity: this.state.opacity }}></div>
             </div>
         )
     }
