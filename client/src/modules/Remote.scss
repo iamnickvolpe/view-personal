@@ -1,18 +1,16 @@
 .remote {
     padding: 1rem;
     font-family: sans-serif;
-    background-image: linear-gradient(to bottom, #FDB775 0%, #BD394B 100%);
     bottom: 0;
     top: 0;
     position: absolute;
     left: 0;
     right: 0;
+    text-align: center;
     .card {
         background-color: white;
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
         padding: 1rem;
         margin-bottom: 1rem;
-        border-radius: 6px;
         &.opacity {
             button {
                 height: 3rem;

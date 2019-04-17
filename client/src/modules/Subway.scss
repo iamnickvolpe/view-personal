@@ -1,3 +1,5 @@
+@import "../styles.scss";
+
 .subway {
     color: white;
     .stop {
@@ -11,24 +13,22 @@
     .line-G {
         background-color: #6cbe45;
         display: inline-block;
-        height: 3vw;
-        width: 3vw;
-        line-height: 3.4vw;
+        height: 1.3em;
+        width: 1.3em;
+        line-height: 1.5;
         text-align: center;
         border-radius: 50%;
         font-weight: 600;
-        font-size: 2vw;
+        font-size: 3em;
     }
     .group-name {
-        font-size: 1vw;
+        font-size: $font-size-large;
         font-weight: 500;
         text-transform: uppercase;
-        margin-top: 0;
-        margin-bottom: .5vw;
-        line-height: 1.2rem;
+        margin-bottom: .5em;
     }
     .update {
-        font-size: .75vw;
-        line-height: 1.75rem;
+        font-size: $font-size-medium;
+        margin-bottom: 1em;
     }
 }

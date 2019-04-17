@@ -1,29 +1,31 @@
+@import "../styles.scss";
+
 .calendar {
     box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.30);
     color: white;
     .group {
-        margin-bottom: 1.25rem;
+        margin-bottom: 1.5em;
     }
     .calendar-name {
-        font-size: 1vw;
+        font-size: $font-size-large;
         font-weight: 500;
-        margin-bottom: 1.25rem;
         margin-top: 0;
+        margin-bottom: 1.5em;
     }
     .group-name {
-        font-size: 1vw;
+        font-size: $font-size-large;
         font-weight: 500;
         text-transform: uppercase;
-        line-height: 1.2rem;
+        margin-bottom: .75em;
     }
     .event {
         display: flex;
+        margin-bottom: .75em;
     }
     .time,
     .summary {
         margin: 0;
-        font-size: .75vw;
-        line-height: 1.75rem;
+        font-size: $font-size-small;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -36,6 +38,6 @@
         width: 80%;
     }
     .none {
-        font-size: .75vw;
+        font-size: $font-size-medium;
     }
 }

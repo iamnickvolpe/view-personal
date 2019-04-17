@@ -1,33 +1,37 @@
+@import "../styles.scss";
+
 .weather {
   color: white;
-  .temperature {
-    font-size: 3.6vw;
+  .temperature .degrees {
+    font-size: $font-size-xx-large;
     font-weight: 300;
+  }
+
+  .temperture .feels-like {
+    font-size: $font-size-medium;
   }
   
   .summary {
     font-weight: 300;
-    font-size: 1.4vw;
+    font-size: $font-size-x-large;
   }
   
   .now {
-    margin-bottom: 2rem;
+    margin-bottom: 2em;
   }
   
   .day {
-    margin-bottom: 2rem;
+    margin-bottom: 2em;
   }
 
   .group-name {
-    font-size: 1vw;
+    font-size: $font-size-large;
     font-weight: 500;
     text-transform: uppercase;
-    margin-bottom: .5vw;
-    line-height: 1.2rem;
+    margin-bottom: .5em;
   }
   
   .day-summary {
-    font-size: .75vw;
-    line-height: 1rem;
+    font-size: $font-size-medium;
   }
 }

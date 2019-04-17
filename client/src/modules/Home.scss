@@ -1,3 +1,5 @@
+@import "../styles.scss";
+
 .cards {
   display: grid;
   padding: 3rem;
@@ -31,7 +33,7 @@
     bottom: 0rem;
     background-color: rgba(0, 0, 0, 0.1);
     padding: 6px 12px;
-    font-size: .65vw;
+    font-size: $font-size-x-small;
     right: 0;
     margin: 0;
     font-weight: 400;
@@ -49,15 +51,25 @@
   background-color: black;
 }
 
+@media only screen and (max-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1em;
+    grid-gap: 1em;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
+
 @media only screen and (max-width: 800px) {
   .cards {
     display: block;
-    padding: 1rem;
-    background-repeat: repeat;
+    background-image: none !important;
+    background-color: #2d2d2d;
+    height: auto;
   }
 
   .module {
-    margin-bottom: 1rem;
-    padding: 1rem;
+    margin-bottom: 1em;
+    padding: 1em;
   }
 }

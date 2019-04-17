@@ -1,8 +1,11 @@
+@import "../styles.scss";
+
 .time {
-    font-size: 3.6vw;
-    font-weight: 900;
-    color: white;
-   
+    .time {
+        font-size: $font-size-xx-large;
+        font-weight: 900;
+        color: white;
+    }
     .ampm {
         font-size: .75em;
     }
@@ -10,8 +13,8 @@
     .date {
         color: white;
         font-weight: 300;
-        font-size: 1.4vw;
-        margin-bottom: 1rem;
+        font-size: $font-size-x-large;
+        margin-bottom: 1em;
     }
 
     .clock {

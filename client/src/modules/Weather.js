@@ -40,7 +40,7 @@ class Weather extends Component {
                 {!_.isEmpty(this.state.weather) ? (
                     <div>
                         <div className="now">
-                            <div><span className="temperature">{temperature}&deg;</span><span>Feels like {apparentTemperature}&deg;</span></div>
+                            <div className="temperature"><span className="degrees">{temperature}&deg;</span><span className="feels-like">Feels like {apparentTemperature}&deg;</span></div>
                             <div className="summary">{now}</div>
                         </div>
 

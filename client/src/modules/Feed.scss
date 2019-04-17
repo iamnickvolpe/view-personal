@@ -1,3 +1,5 @@
+@import "../styles.scss";
+
 .module.feed {
     padding: 0;
     padding-bottom: 2rem;
@@ -11,23 +13,22 @@
         background-position: center center;
     }
     .title {
-        font-size: 1.5vw;
+        font-size: $font-size-x-large;
         font-weight: 500;
-        margin: 0 0 .5rem 0;
+        margin-bottom: .5em;
     }
     .content {
         padding: 1.2rem;
     }
     .published {
-        font-size: .75vw;
-        margin: 0 0 .75rem 0;
+        font-size: $font-size-medium;
+        margin-bottom: .75em;
         color: #999;
     }
     .summary {
-        font-size: .75vw;
-        line-height: 1.5em;
-        margin: 0;
+        font-size: $font-size-medium;
     }
+    
     a,
     img,
     figure {

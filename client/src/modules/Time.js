@@ -6,8 +6,10 @@ class Time extends Component {
   componentDidMount() {
     var that = this;
     var canvas = this.refs.canvas;
+    
+    drawClock();
 
-    setInterval(function () {
+    function drawClock() {
       var width = that.refs.clockWrapper.clientWidth * .8;
       canvas.width = width * 2;
       canvas.height = width * 2;
@@ -22,6 +24,10 @@ class Time extends Component {
       drawNumbers(ctx, radius);
       drawSeasons(ctx, radius);
       drawTime(ctx, radius);
+    }
+
+    setInterval(function () {
+      drawClock();
     }, 1000);
 
     function drawNumbers(ctx, radius) {
