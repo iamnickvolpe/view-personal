@@ -216,6 +216,10 @@ function getAllData() {
   });
 }
 
+app.post("/api/ifttt", (req, res) => {
+  console.log(req, res);
+});
+
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, 'client/build/index.html'), function (err) {
     if (err) {
