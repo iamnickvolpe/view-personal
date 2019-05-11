@@ -216,8 +216,12 @@ function getAllData() {
   });
 }
 
-app.post("/api/ifttt", (req, res) => {
-  console.log(req, res);
+app.post("/api/opacity", (req, res) => {
+  var number = req.body.number;
+  number = number/100;
+  number = 1 - number;
+  io.emit('display', {opacity: number});
+  res.send("OK");
 });
 
 app.get('/*', function (req, res) {
