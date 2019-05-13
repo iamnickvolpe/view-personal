@@ -18,9 +18,9 @@ var d = new Date();
 var n = d.getHours();
 var opacity;
 if (n > 0 && n < 5) {
-  opacity = 0;
-} else {
   opacity = 1;
+} else {
+  opacity = 0;
 }
 
 var display = {
