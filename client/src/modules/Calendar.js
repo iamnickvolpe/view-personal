@@ -5,22 +5,29 @@ import Moment from "react-moment";
 import moment from "moment";
 
 class Calendar extends Component {
-    state = {
-        calendar: {},
-        updated: ""
+    constructor(props) {
+        super(props);
+        this.state = {
+            calendar: {},
+            updated: ""
+        }
     }
 
+        
     componentDidMount() {
-        var that = this;
-        this.props.socket.on("data", function (data) {
-            if (data["calendar-" + that.props.calendar]) {
-                that.setState({
-                    calendar: data["calendar-" + that.props.calendar].body,
-                    updated: data["calendar-" + that.props.calendar].timestamp
-                });
-            }
-        });
+        this.setState({
+            calendar: this.props.data.body,
+            updated: this.props.data.timestamp
+        })
     }
+
+    componentWillReceiveProps(props) {
+        this.setState({
+            calendar: props.data.body,
+            updated: props.data.timestamp
+        })
+    }
+    
 
     render() {
         if (!_.isEmpty(this.state.calendar)) {

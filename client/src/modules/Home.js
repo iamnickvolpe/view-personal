@@ -11,7 +11,11 @@ class Home extends Component {
         super(props);
         this.state = {
             background: "",
-            opacity: ""
+            opacity: "",
+            modal: false,
+            calendar1: "",
+            calendar2: "",
+            calendar3: ""
         }
     }
 
@@ -24,6 +28,27 @@ class Home extends Component {
             if (data.opacity) {
                 that.setState({ opacity: data.opacity });
             }
+            if (data.modal) {
+                that.setState({ modal: true });
+                setTimeout(function() {
+                    that.setState({ modal: false });
+                }, 10000);
+            }
+        });
+
+        this.props.socket.on("data", function (data) {
+            /*if (data["calendar-" + that.props.calendar]) {
+                that.setState({
+                    calendar: data["calendar-" + that.props.calendar].body,
+                    updated: data["calendar-" + that.props.calendar].timestamp
+                });
+            }*/
+            that.setState({ 
+                calendar1: data["calendar-7afrbvotf8p1qcjcpbqp2639as@group.calendar.google.com"],
+                calendar2: data["calendar-iamnickvolpe@gmail.com"],
+                calendar3: data["calendar-jenn.sager@gmail.com"]
+            });
+            console.log(data)
         });
     }
 
@@ -32,14 +57,17 @@ class Home extends Component {
             <div>
                 <div className="cards" style={{ backgroundImage: `url(${this.state.background})` }}>
                     <Time color="rgba(0, 0, 0, 0.35)" />
-                    <Calendar socket={this.props.socket} color="rgb(121, 112, 255)" calendar="7afrbvotf8p1qcjcpbqp2639as@group.calendar.google.com" />
-                    <Calendar socket={this.props.socket} color="rgb(253, 147, 72)" calendar="iamnickvolpe@gmail.com" />
-                    <Calendar socket={this.props.socket} color="rgb(210, 102, 255)" calendar="jenn.sager@gmail.com" />
+                    <Calendar socket={this.props.socket} color="rgb(121, 112, 255)" data={this.state.calendar1} />
+                    <Calendar socket={this.props.socket} color="rgb(253, 147, 72)" data={this.state.calendar2} />
+                    <Calendar socket={this.props.socket} color="rgb(210, 102, 255)" data={this.state.calendar3} />
                     <Weather socket={this.props.socket} color="rgba(0, 0, 0, 0.35)" />
                     <Subway socket={this.props.socket} color="rgba(0, 0, 0, 0.35)" />
                     <Feed socket={this.props.socket} color="white" />
                 </div>
                 <div className="cover" style={{ opacity: this.state.opacity }}></div>
+                {this.state.modal === true ? (
+                    <Calendar socket={this.props.socket} color="rgb(121, 112, 255)" data={this.state.calendar1} />
+                ): null}
             </div>
         )
     }

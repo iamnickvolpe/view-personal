@@ -42,6 +42,20 @@ class Remote extends Component {
         });
     }
 
+    invokeModal() {
+        fetch(
+            "/api/modal", {
+                credentials: "same-origin",
+                headers: { "Content-Type": "application/json" },
+                method: "POST"
+            }
+        ).then(function(response) {
+            console.log(response);
+        }).catch(function (error) {
+            console.log(error);
+        });
+    }
+
     handleChange(event) {
         this.setState({value: event.target.value});
       }
@@ -57,6 +71,10 @@ class Remote extends Component {
                     <button onClick={() => this.changeOpacity("0")}>100%</button>
                     <button onClick={() => this.changeOpacity(".5")}>50%</button>
                     <button onClick={() => this.changeOpacity("1")}>0%</button>
+                </div>
+
+                <div className="card">
+                    <button onClick={() => this.invokeModal()}>Invoke Modal</button>
                 </div>
             </div>
         )
