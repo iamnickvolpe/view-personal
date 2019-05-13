@@ -14,9 +14,18 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 
 var io = app.io = require("socket.io")();
 
+var d = new Date();
+var n = d.getHours();
+var opacity;
+if (n > 0 && n < 5) {
+  opacity = 0;
+} else {
+  opacity = 1;
+}
+
 var display = {
   background: process.env.DEFAULT_IMAGE,
-  opacity: "0"
+  opacity: opacity
 };
 
 io.on("connection", socket => {
@@ -56,12 +65,12 @@ app.use(function catchError(req, res, next, err) {
   });
 });
 
-cron.schedule('0 7 * * *', () => {
+/*cron.schedule('0 7 * * *', () => {
   display.opacity = "0";
   io.emit("display", display);
 }, {
   timezone: "America/New_York"
-});
+});*/
 
 function getSubway(callback) {
   var decodedBody;
@@ -220,7 +229,7 @@ app.post("/api/opacity", (req, res) => {
   var number = req.body.number;
   number = number/100;
   number = 1 - number;
-  io.emit('display', {opacity: number});
+  io.emit('display', {opacity: String(number)});
   res.send("OK");
 });
 
