@@ -65,12 +65,12 @@ app.use(function catchError(req, res, next, err) {
   });
 });
 
-/*cron.schedule('0 7 * * *', () => {
+cron.schedule('0 7 * * *', () => {
   display.opacity = "0";
   io.emit("display", display);
 }, {
   timezone: "America/New_York"
-});*/
+});
 
 function getSubway(callback) {
   var decodedBody;
