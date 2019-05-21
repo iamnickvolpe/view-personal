@@ -37,12 +37,6 @@ class Home extends Component {
         });
 
         this.props.socket.on("data", function (data) {
-            /*if (data["calendar-" + that.props.calendar]) {
-                that.setState({
-                    calendar: data["calendar-" + that.props.calendar].body,
-                    updated: data["calendar-" + that.props.calendar].timestamp
-                });
-            }*/
             that.setState({ 
                 calendar1: data["calendar-7afrbvotf8p1qcjcpbqp2639as@group.calendar.google.com"],
                 calendar2: data["calendar-iamnickvolpe@gmail.com"],
